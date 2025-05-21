@@ -1,0 +1,55 @@
+.skills .container .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px 15px;
+}
+.skills .container .content .margin-cover {
+    margin: 0 10px;
+}
+.skills .container .content .margin-cover .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .container .content .margin-cover .info span {
+    font-family: var(--second-font);
+    font-size: 14px;
+    font-weight: bold;
+}
+.skills .container .content .margin-cover .info .percentage .mark {
+    font-weight: bolder;
+}
+.skills .container .content .margin-cover .description {
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 10px 0 20px;
+}
+.skills .container .content .progress {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+.skills .container .content .progress .child {
+    position: relative;
+    height: 100%;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -ms-transition: 1.5s;
+    -o-transition: 1.5s;
+}
+.skills.light .container .content .progress .child {
+    background-color: var(--border-color-light);
+}
+.skills.dark .container .content .progress .child {
+    background-color: var(--border-color-dark);
+}
+.skills .container .content .progress .child .circle-shape {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}

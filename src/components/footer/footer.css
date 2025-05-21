@@ -1,0 +1,24 @@
+.footer {
+    margin: 30px 0 0;
+    border-top: 1px solid var(--border-color-dark);
+    padding: 45px 0;
+}
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+@media (max-width: 540px) {
+    .footer .container {
+        flex-direction: column;
+    }
+}
+.footer .container .social-links {
+    margin: 0;
+}
+.footer .container .copy-right,
+.footer .container span {
+    font-size: 14px;
+    font-weight: 600;
+}

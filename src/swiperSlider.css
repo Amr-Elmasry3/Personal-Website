@@ -1,0 +1,82 @@
+.container .slider .my-swiper {
+    overflow-x: hidden;
+    padding: 3px;
+}
+.container .slider .my-swiper .swiper-slide {
+    padding: 15px;
+    border-radius: 10px;
+    height: initial;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.light .container .slider .my-swiper .swiper-slide {
+    box-shadow: 0 0 7px var(--shadow-color-light);
+}
+.dark .container .slider .my-swiper .swiper-slide {
+    box-shadow: 0 0 7px var(--shadow-color-dark);
+}
+.container .slider .my-swiper .swiper-slide .shape {
+    bottom: -20px;
+    right: -20px;
+}
+.container .slider .my-swiper .swiper-pagination {
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+.container .slider .my-swiper .swiper-pagination::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+}
+.light .container .slider .my-swiper .swiper-pagination::before {
+    background-color: var(--border-color-light);
+}
+.dark .container .slider .my-swiper .swiper-pagination::before {
+    background-color: var(--border-color-dark);
+}
+.container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    margin: 0;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+}
+.light .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet {
+    border: 2px solid var(--border-color-light);
+}
+.dark .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet {
+    border: 2px solid var(--border-color-dark);
+}
+.container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+}
+.first-color .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--first-color);
+}
+.second-color .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--second-color);
+}
+.third-color .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--third-color);
+}
+.fourth-color .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--fourth-color);
+}
+.fivth-color .container .slider .my-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--fivth-color);
+}

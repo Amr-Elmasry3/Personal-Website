@@ -1,38 +1,279 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Montserrat+Alternates:wght@600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --hue1: 165;
+    --hue2: 265;
+    --hue3: 345;
+    --hue4: 65;
+    --hue5: 15;
+    /* Main Colors */
+    --first-color: hsl(var(--hue1), 60%, 40%);
+    --second-color: hsl(var(--hue2), 60%, 40%);
+    --third-color: hsl(var(--hue3), 60%, 40%);
+    --fourth-color: hsl(var(--hue4), 60%, 40%);
+    --fivth-color: hsl(var(--hue5), 60%, 40%);
+
+    /* Light Mode */
+    --title-color-light: hsl(var(--hue1), 4%, 12%);
+    --text-color-light: hsl(var(--hue1), 4%, 20%);
+    --container-color-light: hsl(0, 0%, 100%);
+    --border-color-light: hsl(var(--hue1), 4%, 16%);
+    --white-color-light: hsl(0, 0%, 100%);
+    --shadow-color-light: hsla(var(--hue1), 80%, 10%, 0.2);
+
+    /* Dark Mode */
+    --title-color-dark: hsl(0, 0%, 100%);
+    --text-color-dark: hsl(0, 0%, 92%);
+    --container-color-dark: hsl(0, 10%, 16%);
+    --border-color-dark: hsl(var(--hue1), 4%, 65%);
+    --shadow-color-dark: hsla(var(--hue1), 0%, 100%, 0.2);
+
+    --body-font: 'Jost', sans-serif;
+    --second-font: 'Montserrat Alternates', sans-serif;
+
+    --transition-duration: 0.4s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    font-family: var(--body-font);
+    margin: 0;
+}
+
+/* Handle All Titles */
+.light .same-title-color {
+    color: var(--title-color-light);
+}
+.dark .same-title-color {
+    color: var(--title-color-dark);
+}
+
+/* Handle All Texts */
+.light .same-text-color {
+    color: var(--text-color-light);
+}
+.dark .same-text-color {
+    color: var(--text-color-dark);
+}
+
+/* Handle All Elements Have Main Color */
+.first-color .same-main-color {
+    color: var(--first-color);
+}
+.second-color .same-main-color {
+    color: var(--second-color);
+}
+.third-color .same-main-color {
+    color: var(--third-color);
+}
+.fourth-color .same-main-color {
+    color: var(--fourth-color);
+}
+.fivth-color .same-main-color {
+    color: var(--fivth-color);
+}
+
+/* Handle All Background For All Sections */
+/* Done This Part From App Js */
+
+/* Handle Hover Action */
+.same-hover-color {
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.first-color .same-hover-color:hover {
+  color: var(--first-color);
+}
+.second-color .same-hover-color:hover {
+  color: var(--second-color);
+}
+.third-color .same-hover-color:hover {
+  color: var(--third-color);
+}
+.fourth-color.same-hover-color:hover {
+  color: var(--fourth-color);
+}
+.fivth-color .same-hover-color:hover {
+  color: var(--fivth-color);
+}
+
+/* Handle After And Before Background-Color */
+.light .same-after-before-bg {
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.light .same-after-before-bg:hover {
+  color: var(--title-color-dark);
+}
+.dark .same-after-before-bg:hover {
+  color: var(--title-color-light);
+}
+.same-after-before-bg::before,
+.same-after-before-bg::after{
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.first-color .same-after-before-bg::before,
+.first-color .same-after-before-bg::after{
+  background-color: var(--first-color);
+}
+.second-color .same-after-before-bg::before,
+.first-color .same-after-before-bg::after {
+  background-color: var(--second-color);
+}
+.third-color .same-after-before-bg::before,
+.first-color .same-after-before-bg::after {
+  background-color: var(--third-color);
+}
+.fourth-color .same-after-before-bg::before,
+.first-color .same-after-before-bg::after {
+  background-color: var(--fourth-color);
+}
+.fivth-color .same-after-before-bg::before,
+.first-color .same-after-before-bg::after {
+  background-color: var(--fivth-color);
+}
+
+/* Handle Box-Shadow */
+.light .same-box-shadow {
+  box-shadow: 3px 3px 0 var(--shadow-color-light);
+}
+.dark .same-box-shadow {
+  box-shadow: 3px 3px 0 var(--shadow-color-dark);
+}
+
+/* Handle Border Style */
+.light .same-border-style {
+  border: 2px solid var(--border-color-light);
+}
+.dark .same-border-style {
+  border: 2px solid var(--border-color-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+input, textarea, select, button {
+    outline: none;
+    border: none;
+}
+
+.container {
+  margin: 0 120px;
+}
+@media (max-width: 1029px) {
+  .container {
+    margin: 0 90px;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    margin: 0 30px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    margin: 0 15px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* Handle Social Links */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 30px;
+}
+.social-links a {
+    font-weight: bold;
+}
+.social-links a .icon {
+    font-size: 19px;
+}
+
+/* Handle Main Heading */
+.container .main-heading {
+    text-align: center;
+    margin: 0 0 35px;
+}
+.container .main-heading .subtitle {
+    font-family: var(--second-font);
+}
+
+/* Handle Circle Shape */
+.shape {
+  position: absolute;
+  width: 100px;
+}
+.dark .shape {
+    filter: brightness(0.5) invert(1);
+    -webkit-filter: brightness(0.5) invert(1);
+}
+
+/* Handle Button Style */
+.button {
+    position: relative;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 0;
+}
+.button.same-after-before-bg::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: -1;
+}
+.button:hover::before {
+    width: 97%;
+}
+
+.app {
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.app .main-section {
+  position: relative;
+  padding: 70px 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

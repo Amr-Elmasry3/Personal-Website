@@ -1,0 +1,36 @@
+.testimonials .containe .slider .my-swiper .swiper-slide .customer-picture {
+    position: relative;
+}
+.testimonials .container .slider .my-swiper .swiper-slide .customer-picture img {
+    width: 100%;
+    border-radius: 10px;
+}
+.testimonials .container .slider .my-swiper .swiper-slide .customer-picture .icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 0 0 10px;
+    top: 0;
+    left: 10px;
+    -webkit-border-radius: 0 0 10px;
+    -moz-border-radius: 0 0 10px;
+    -ms-border-radius: 0 0 10px;
+    -o-border-radius: 0 0 10px;
+}
+.testimonials .container .slider .my-swiper .swiper-slide .description {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 10px 0 40px;
+}
+.testimonials .container .slider .my-swiper .swiper-slide .info {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.testimonials .container .slider .my-swiper .swiper-slide .info .name {
+    font-family: var(--second-font);
+}
+.testimonials .container .slider .my-swiper .swiper-slide .info .job {
+    font-size: 14px;
+}

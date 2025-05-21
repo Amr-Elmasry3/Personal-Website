@@ -1,0 +1,15 @@
+.resume .container .content {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    gap: 40px 20px;
+}
+@media (max-width: 767px) {
+    .resume .container .content {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+.resume .container .content .section .resume-title {
+    font-family: var(--second-font);
+    text-align: center;
+    margin: 0 0 20px;
+}

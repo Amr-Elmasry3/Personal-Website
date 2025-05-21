@@ -1,0 +1,65 @@
+.section-box {
+    position: relative;
+    padding: 15px 8px;
+    cursor: pointer;
+}
+.light .section-box {
+    border-bottom: 2px solid var(--border-color-light);
+}
+.dark .section-box {
+    border-bottom: 2px solid var(--border-color-dark);
+}
+.light .section-box:not(:first-of-type) {
+    border-right: 2px solid var(--border-color-light);
+}
+.dark .section-box:not(:first-of-type) {
+    border-right: 2px solid var(--border-color-dark);
+}
+.light .section-box:first-of-type {
+    border-top: 2px solid var(--border-color-light);
+}
+.dark .section-box:first-of-type {
+    border-top: 2px solid var(--border-color-dark);
+}
+.section-box .headr-title {
+    font-family: var(--second-font);
+}
+.section-box .content-box {
+    height: 0;
+    overflow: hidden;
+}
+.section-box .content-box.open {
+    height: fit-content;
+}
+.section-box .content-box .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-family: var(--second-font);
+}
+.section-box .content-box .details .date {
+    font-size: 12px;
+    font-weight: 700;
+}
+.section-box .content-box .description {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 0 7px;
+}
+.section-box .button-box {
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+}
+.section-box .button-box .icon {
+    font-size: 20px;
+}

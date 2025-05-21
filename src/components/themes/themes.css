@@ -1,0 +1,90 @@
+.themes {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    padding: 60px 40px 0;
+    overflow: hidden;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    z-index: 90;
+}
+.themes.light {
+    box-shadow: 0 0 5px var(--shadow-color-light);
+}
+.themes.dark {
+    box-shadow: 0 0 5px var(--shadow-color-dark);
+}
+.themes.open {
+    right: 0;
+}
+.themes .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+.themes .element {
+    padding: 12px 0;
+}
+.themes.light .element {
+    border-bottom: 1px solid var(--border-color-light);
+}
+.themes.dark .element {
+    border-bottom: 1px solid var(--border-color-dark);
+}
+.themes .title {
+    font-size: 15px;
+    font-weight: 600;
+}
+.themes .colors-section .content {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0 0;
+} 
+.themes .colors-section .content li {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.themes .colors-section .content li .icon {
+    position: absolute;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    display: none;
+}
+.themes .colors-section .content li.active > .icon {
+    display: block;
+}
+.themes .mode-section .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 0;
+}
+.themes .mode-section .content .box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.themes .mode-section .content .box input {
+    margin: 0;
+    width: 12px;
+}
+.themes .mode-section .content .box label {
+    font-size: 14px;
+}

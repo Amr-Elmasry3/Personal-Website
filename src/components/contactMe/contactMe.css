@@ -75,7 +75,8 @@
 .contact .container .content form .box textarea {
     border-radius: 20px;
     padding: 8px 12px;
-    font-size: 13px;
+    font-family: var(--body-font);
+    font-size: 15px;
     font-weight: 600;
 }
 .contact .container .content form .box textarea {
